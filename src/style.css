@@ -1,0 +1,431 @@
+@font-face {
+  font-family: "Fira Code";
+  font-weight: 300;
+  src: url("https://swiftlystatic.vercel.app/airacloud/font?request=firacode/light");
+}
+@font-face {
+  font-family: "Fira Code";
+  font-weight: 400;
+  src: url("https://swiftlystatic.vercel.app/airacloud/font?request=firacode/regular");
+}
+@font-face {
+  font-family: "Fira Code";
+  font-weight: 500;
+  src: url("https://swiftlystatic.vercel.app/airacloud/font?request=firacode/medium");
+}
+@font-face {
+  font-family: "Fira Code";
+  font-weight: 600;
+  src: url("https://swiftlystatic.vercel.app/airacloud/font?request=firacode/semibold");
+}
+@font-face {
+  font-family: "Fira Code";
+  font-weight: 700;
+  src: url("https://swiftlystatic.vercel.app/airacloud/font?request=firacode/bold");
+}
+
+@font-face {
+  font-family: "bevietnam";
+  font-weight: 100;
+  src: url("https://swiftlystatic.vercel.app/swiftly/font?request=BeVietnamPro-Thin");
+}
+@font-face {
+  font-family: "bevietnam";
+  font-weight: 100;
+  font-style: italic;
+  src: url("https://swiftlystatic.vercel.app/swiftly/font?request=BeVietnamPro-ThinItalic");
+}
+
+@font-face {
+  font-family: "bevietnam";
+  font-weight: 300;
+  src: url("https://swiftlystatic.vercel.app/swiftly/font?request=BeVietnamPro-Regular");
+}
+@font-face {
+  font-family: "bevietnam";
+  font-weight: 300;
+  font-style: italic;
+  src: url("https://swiftlystatic.vercel.app/swiftly/font?request=BeVietnamPro-RegularItalic");
+}
+
+@font-face {
+  font-family: "bevietnam";
+  font-weight: 600;
+  src: url("https://swiftlystatic.vercel.app/swiftly/font?request=BeVietnamPro-Bold");
+}
+@font-face {
+  font-family: "bevietnam";
+  font-weight: 600;
+  font-style: italic;
+  src: url("https://swiftlystatic.vercel.app/swiftly/font?request=BeVietnamPro-BoldItalic");
+}
+
+@font-face {
+  font-family: "bevietnam";
+  font-weight: 700;
+  src: url("https://swiftlystatic.vercel.app/swiftly/font?request=BeVietnamPro-Black");
+}
+@font-face {
+  font-family: "bevietnam";
+  font-weight: 700;
+  font-style: italic;
+  src: url("https://swiftlystatic.vercel.app/swiftly/font?request=BeVietnamPro-BlackItalic");
+}
+@font-face {
+  font-family: "atkinson";
+  src: url("https://swiftlystatic.vercel.app/airacloud/font?request=atkinson/regular");
+}
+@font-face {
+  font-family: "atkinson";
+  font-weight: bold;
+  src: url("https://swiftlystatic.vercel.app/airacloud/font?request=atkinson/bold");
+}
+@font-face {
+  font-family: "atkinson";
+  font-style: italic;
+  font-weight: bold;
+  src: url("https://swiftlystatic.vercel.app/airacloud/font?request=atkinson/bolditalic");
+}
+@font-face {
+  font-family: "atkinson";
+  font-style: italic;
+  src: url("https://swiftlystatic.vercel.app/airacloud/font?request=atkinson/italic");
+}
+html, body {
+  background-color: var(--bg);
+  color: white;
+  margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "bevietnam";
+}
+h1 {
+  line-height: 1em;
+}
+h2 {
+  line-height: 1em
+}
+
+nav a[href] {
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  width: 100vw;
+  padding: 24px;
+  padding-left: var(--margin);
+  padding-right: var(--margin);
+  font-size: 18px;
+  gap: 8px;
+  align-items: center;
+  font-family: 'bevietnam';
+  position: absolute;
+}
+
+@keyframes fixed-anim {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+code, pre {
+  font-family: 'Fira Code';
+}
+.effect-bg  {
+  position: absolute;
+  z-index: 0;
+  --color1: #ffcb9b;
+  --color2: #ff9bff;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+  filter: blur(1000px)
+}
+nav.fixed {
+  backdrop-filter: blur(10000000px);
+  background-color: rgba(var(--bg-rgb), .5);
+  position: fixed;
+  z-index: 1000000;
+  animation-name: fixed-anim;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+
+}
+.elems {
+  display: flex;
+  flex-direction: column;
+  font-family: 'bevietnam';
+  top: 89px;
+  background-color: rgba(var(--bg-rgb), .8);
+  position: fixed;
+  right: 0px;
+  max-width: 25vw;
+  height: 100vh;
+}
+.elems ol {
+  padding: 0px;
+  width: 100%;
+}
+nav *, nav {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.elems section * {
+  padding: 4px;
+  padding-left: 0px;
+}
+.c-elems {
+  display: flex;
+  padding-left: var(--margin);
+  padding-right: calc(var(--margin) / 2);
+}
+nav .nav-right {
+  margin-left: auto;
+}
+nav button.hover {
+  background: rgba(255, 255, 255, 0.045);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+}
+
+nav button.active {
+  background-color: var(--accent);
+}
+
+nav button {
+  border: none;
+  background-color: transparent;
+  font-family: "atkinson";
+  color: white;
+  font-size: 15px;
+  border-radius: 8px;
+  padding: 12px;
+  display: inline-flex;
+}
+
+.content hr.principal {
+  border-width: 1px;
+  border-color: var(--accent);
+  border-style:dashed;
+  margin-bottom: 24px;
+}
+
+.content {
+  font-family: atkinson;
+  font-size: 18px;
+}
+
+blockquote {
+  padding: 0 1em;
+  color: #8b939d;
+  margin: 0px;
+  padding-left: calc(1em + .25em);
+  position: relative;
+}
+blockquote::before {
+  content: "";
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  left: 0px;
+  border-radius: 1000px;
+  width: .25em;
+  background-color: #2d3339;
+}
+
+.elems section {
+  border-left: 1px dotted rgba(255, 255, 255, 0.5);
+  padding-left: 24px;
+}
+[tag] {
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+[tag]:hover {
+  opacity: 0.8;
+}
+[tag]:active {
+  opacity: 0.6
+}
+[tag]:hover::before {
+  opacity: 0.7
+}
+[tag]::before {
+  content: "§";
+  opacity: 0;
+  position: absolute;
+  left: -38px
+}
+.elems section a {
+  display: flex;
+  gap: 4px;
+  color: white; 
+  text-decoration: none;
+}
+.elems section a:hover {
+  opacity: 0.7
+}
+.elems section a:active {
+  opacity: 0.5;
+}
+.elems section a span {
+  content: attr(num);
+  opacity: 0.6;
+}
+
+.content h2 {
+  font-size: calc(66px / 1.6);
+  margin: 0px;
+}
+
+.content a[href] {
+  text-decoration-thickness: 0.1px;
+  text-decoration-style:dotted;
+  color: var(--accent);
+}
+.content a[href]:hover {
+  color: var(--accent-h);
+}
+
+
+
+.content h1 {
+  font-size: 66px;
+  margin: 0px;
+  font-weight: 1000000;
+}
+
+@keyframes static-anim {
+  0% {transform: translateY(0%);}
+  100% {transform: translateY(-100%);}
+}
+
+nav.static {
+  animation-name: static-anim;
+  transform: translateY(-100%);
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+}
+
+h3 {
+  font-size: 27px;
+  margin: 0px;
+}
+
+* {
+  --bg: rgb(16, 15, 15);
+  --bg-rgb: 16, 15, 15;
+  --margin: 16vw;
+  --accent: #0064c8;
+  --accent-h: #004993;
+  box-sizing: border-box;
+  transition-duration: 0.1s;
+  scroll-behavior: smooth;
+}code[class*="language-"],
+pre[class*="language-"] {
+  color: #e1e4e8;
+  font-family: "Fira Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #3392ff44;
+}
+
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #3392ff44;
+}
+
+@media print {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  color: white;
+  background: #24292e;
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.chatify *:not(code *), .chatify {
+  color: var(--chatify-theme-fg);
+}
+.token.keyword.module, .token.keyword.control-flow {
+  color: #ff7b72!important;
+}
+.token.punctuation {
+  color: unset;
+}
+.token.tag .token.punctuation:not(.attr-equals) {
+  color: gray;
+}
+.token.attr-value, .token.attr-value .punctuation, .token.string {
+  color: #a6d7ff!important;
+}
+.token.attr-value .attr-equals {
+  color: #e1e4e8!important;
+}
+.token.tag .class-name {
+  color: #7ee587;
+}
+.token.attr-name {
+  color: #7ac0ff;
+}
+.token.keyword {
+  color: #ff7c73;
+}
+.token.property-access, .token.regex {
+  color: #76bcfb;
+}
+.token.function {
+  color: #d0a6fd;
+}
+pre {
+  border-radius: 9px;
+}
